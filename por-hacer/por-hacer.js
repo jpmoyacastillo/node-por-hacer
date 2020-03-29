@@ -48,10 +48,12 @@ const crear = (descripcion) => {
 }
 
 //funcion que permpite leer el listado de tareas y retornarlo
-const getListado = () => {
+const getListado = (completado) => {
 
     cargarDB();
-    return listadoPorHacer;
+
+    let listadoBusqueda = listadoPorHacer.filter(tarea => tarea.completado !== completado);
+    return listadoBusqueda;
 }
 
 //funcion que permite actualizar un dato de acuerdo a la descripcion entregada por el usuario

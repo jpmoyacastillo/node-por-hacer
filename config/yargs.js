@@ -1,10 +1,3 @@
-// const options = {
-//     descripcion : {
-//         demand : true,
-//         alias: 'd'
-//     },
-// }
-
 const descripcion = {
     demand: true,
     alias: 'd',
@@ -12,9 +5,9 @@ const descripcion = {
 };
 
 const completado = {
-    default: true,
+    //default: true,
     alias: 'c',
-    desc: 'Marca como completado o pendiente la tarea'
+    desc: 'Muestra estados NO COMPLETADOS (en comando "listar") o modifica estado de una tarea a completado (en comando "actualizar")'
 };
 
 
@@ -28,6 +21,9 @@ const argv = require('yargs')
     })
     .command('borrar', 'Borra una tarea creada', {
         descripcion
+    })
+    .command('listar', 'Muestra la lista de tareas', {
+        completado
     })
     .help()
     .argv;
