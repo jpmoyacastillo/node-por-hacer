@@ -1,9 +1,8 @@
-## Aplicación de comandos
+## Command application
+This is the course exercise
 
-Este es el ejercicio del curso
 
-
-Recuerden instalar los paquetes de node
+Remember to install the node packages
 
 ```
 npm install
